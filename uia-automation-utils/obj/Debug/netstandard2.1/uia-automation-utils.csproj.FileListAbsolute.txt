@@ -1,0 +1,10 @@
+/Users/mohanrajdevadoss/Documents/GitHub/automation-framework-utils/uia-automation-utils/bin/Debug/netstandard2.1/uia-automation-utils.deps.json
+/Users/mohanrajdevadoss/Documents/GitHub/automation-framework-utils/uia-automation-utils/bin/Debug/netstandard2.1/uia-automation-utils.dll
+/Users/mohanrajdevadoss/Documents/GitHub/automation-framework-utils/uia-automation-utils/bin/Debug/netstandard2.1/uia-automation-utils.pdb
+/Users/mohanrajdevadoss/Documents/GitHub/automation-framework-utils/uia-automation-utils/obj/Debug/netstandard2.1/uia-automation-utils.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mohanrajdevadoss/Documents/GitHub/automation-framework-utils/uia-automation-utils/obj/Debug/netstandard2.1/uia-automation-utils.AssemblyInfoInputs.cache
+/Users/mohanrajdevadoss/Documents/GitHub/automation-framework-utils/uia-automation-utils/obj/Debug/netstandard2.1/uia-automation-utils.AssemblyInfo.cs
+/Users/mohanrajdevadoss/Documents/GitHub/automation-framework-utils/uia-automation-utils/obj/Debug/netstandard2.1/uia-automation-utils.csproj.CoreCompileInputs.cache
+/Users/mohanrajdevadoss/Documents/GitHub/automation-framework-utils/uia-automation-utils/obj/Debug/netstandard2.1/uia-automation-utils.sourcelink.json
+/Users/mohanrajdevadoss/Documents/GitHub/automation-framework-utils/uia-automation-utils/obj/Debug/netstandard2.1/uia-automation-utils.dll
+/Users/mohanrajdevadoss/Documents/GitHub/automation-framework-utils/uia-automation-utils/obj/Debug/netstandard2.1/uia-automation-utils.pdb
