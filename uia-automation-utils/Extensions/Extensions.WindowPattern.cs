@@ -1,4 +1,5 @@
 ﻿using System.Windows.Automation;
+using Interop.UIAutomationClient;
 
 namespace UIA.Automation.Utils.Extensions
 {
@@ -11,17 +12,17 @@ namespace UIA.Automation.Utils.Extensions
 
         public static void MinimizeWindow(this AutomationElement element)
         {
-            element.SetWindowVisualState(WindowVisualState.Minimized);
+            element.SetWindowVisualState(WindowVisualState.WindowVisualState_Minimized);
         }
 
         public static void MaximizeWindow(this AutomationElement element)
         {
-            element.SetWindowVisualState(WindowVisualState.Maximized);
+            element.SetWindowVisualState(WindowVisualState.WindowVisualState_Maximized);
         }
 
         public static void RestoreWindow(this AutomationElement element)
         {
-            element.SetWindowVisualState(WindowVisualState.Normal);
+            element.SetWindowVisualState(WindowVisualState.WindowVisualState_Normal);
         }
 
         public static void CloseWindow(this AutomationElement element)
@@ -31,17 +32,17 @@ namespace UIA.Automation.Utils.Extensions
 
         public static bool IsWindowMinimized(this AutomationElement element)
         {
-            return element.GetWindowVisualState() == WindowVisualState.Minimized;
+            return element.GetWindowVisualState() == WindowVisualState.WindowVisualState_Minimized;
         }
 
         public static bool IsWindowMaximized(this AutomationElement element)
         {
-            return element.GetWindowVisualState() == WindowVisualState.Maximized;
+            return element.GetWindowVisualState() == WindowVisualState.WindowVisualState_Maximized;
         }
 
         public static bool IsWindowRestored(this AutomationElement element)
         {
-            return element.GetWindowVisualState() == WindowVisualState.Normal;
+            return element.GetWindowVisualState() == WindowVisualState.WindowVisualState_Normal;
         }
 
         public static bool CanMinimize(this AutomationElement element)

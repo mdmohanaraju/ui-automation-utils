@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
 using System.Windows.Automation;
+using Interop.UIAutomationClient;
 
 namespace UIA.Automation.Utils.Search
 {
 	public class Element
 	{
-        private List<PropertyCondition> _propertyConditions = new();
-        private TreeScope _treeScope = TreeScope.Descendants;
+        private List<PropertyCondition> _propertyConditions = new List<PropertyCondition>();
+        private TreeScope _treeScope = TreeScope.TreeScope_Descendants;
         private AutomationElement? _parentElement;
 
         private Element()
@@ -29,19 +33,19 @@ namespace UIA.Automation.Utils.Search
         /// <param name="x">The physical X co-ordinate of the UI element in the desktop</param>
         /// <param name="y">The physical Y co-ordinate of the UI element in the desktop</param>
         /// <returns><see cref="AutomationElement"/> at the given x and y co-ordinate</returns>
-        public static AutomationElement FromPoint(double x, double y) => AutomationElement.FromPoint(new System.Windows.Point(x, y));
+        public static AutomationElement FromPoint(int x, int y) => AutomationElement.FromPoint(new Point(x, y));
 
         /// <summary>
         /// Gets the element search context
         /// </summary>
-        public static Element Search => new();
+        public static Element Search => new Element();
 
         /// <summary>
         /// Gets the element referenced by the given window handle
         /// </summary>
         /// <param name="windowHandle">The handle of the UI element</param>
         /// <returns></returns>
-        public static AutomationElement FromHandle(nint windowHandle) => AutomationElement.FromHandle(windowHandle);
+        public static AutomationElement FromHandle(int windowHandle) => AutomationElement.FromHandle(new IntPtr(windowHandle));
 
         /// <summary>
         /// Add name property as a search condition
@@ -132,7 +136,7 @@ namespace UIA.Automation.Utils.Search
         private void AddPropertyCondition(AutomationProperty automationProperty, object value)
         {
             RemoveSearchConditionIfExistsForProperty(automationProperty);
-            _propertyConditions.Add(new PropertyCondition(automationProperty, value, PropertyConditionFlags.IgnoreCase));
+            _propertyConditions.Add(new PropertyCondition(automationProperty, value, PropertyConditionFlags.PropertyConditionFlags_IgnoreCase));
         }
 
         private void RemoveSearchConditionIfExistsForProperty(AutomationProperty automationProperty)

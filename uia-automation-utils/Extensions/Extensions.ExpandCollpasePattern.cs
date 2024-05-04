@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows.Automation;
+using Interop.UIAutomationClient;
 
 namespace UIA.Automation.Utils.Extensions
 {
 	public static partial class AutomationElementExtensions
-	{
+	{        
         public static ExpandCollapsePattern GetExpandCollpasePattern(this AutomationElement element)
         {
             return element.GetPattern<ExpandCollapsePattern>(ExpandCollapsePattern.Pattern);
@@ -22,22 +23,22 @@ namespace UIA.Automation.Utils.Extensions
 
         public static bool IsExpanded(this AutomationElement element)
         {
-            return element.GetExpandCollpasePattern().Current.ExpandCollapseState == ExpandCollapseState.Expanded;
+            return element.GetExpandCollpasePattern().Current.ExpandCollapseState == ExpandCollapseState.ExpandCollapseState_Expanded;
         }
 
         public static bool IsCollapsed(this AutomationElement element)
         {
-            return element.GetExpandCollpasePattern().Current.ExpandCollapseState == ExpandCollapseState.Collapsed;
+            return element.GetExpandCollpasePattern().Current.ExpandCollapseState == ExpandCollapseState.ExpandCollapseState_Collapsed;
         }
 
         public static bool IsLeafNode(this AutomationElement element)
         {
-            return element.GetExpandCollpasePattern().Current.ExpandCollapseState == ExpandCollapseState.LeafNode;
+            return element.GetExpandCollpasePattern().Current.ExpandCollapseState == ExpandCollapseState.ExpandCollapseState_LeafNode;
         }
 
         public static bool IsPartiallyExpanded(this AutomationElement element)
         {
-            return element.GetExpandCollpasePattern().Current.ExpandCollapseState == ExpandCollapseState.PartiallyExpanded;
+            return element.GetExpandCollpasePattern().Current.ExpandCollapseState == ExpandCollapseState.ExpandCollapseState_PartiallyExpanded;
         }
     }
 }

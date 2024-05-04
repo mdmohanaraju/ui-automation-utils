@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Automation;
+using Interop.UIAutomationClient;
 
 namespace UIA.Automation.Utils.Extensions
 {
@@ -28,17 +29,17 @@ namespace UIA.Automation.Utils.Extensions
 
         public static bool IsChecked(this AutomationElement element)
         {
-            return element.IsToggleStateMatch(ToggleState.On);
+            return element.IsToggleStateMatch(ToggleState.ToggleState_On);
         }
 
         public static bool IsUnchecked(this AutomationElement element)
         {
-            return element.IsToggleStateMatch(ToggleState.Off);
+            return element.IsToggleStateMatch(ToggleState.ToggleState_Off);
         }
 
         public static bool IsIndeterminate(this AutomationElement element)
         {
-            return element.IsToggleStateMatch(ToggleState.Indeterminate);
+            return element.IsToggleStateMatch(ToggleState.ToggleState_Indeterminate);
         }
 
         private static bool IsToggleStateMatch(this AutomationElement element, ToggleState toggleState)

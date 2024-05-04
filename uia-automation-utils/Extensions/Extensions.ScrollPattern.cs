@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Automation;
+using Interop.UIAutomationClient;
 
 namespace UIA.Automation.Utils.Extensions
 {

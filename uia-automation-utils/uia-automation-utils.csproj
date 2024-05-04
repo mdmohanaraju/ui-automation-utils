@@ -1,26 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>UIA.Automation.Utils</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>uia_automation_utils</RootNamespace>
     <Nullable>enable</Nullable>
-    <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
 
   <ItemGroup>
-      <FrameworkReference Include="Microsoft.WindowsDesktop.App" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Extensions\" />
-    <None Remove="Extensions\ElementIdentification.SearchMethods.cs" />
-    <None Remove="Search\" />
-    <None Remove="Extensions\Extensions.ScrollItemPattern" />
-    <None Remove="Extensions\Extensions.GridItemPattern" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Extensions\" />
-    <Folder Include="Search\" />
+    <PackageReference Include="UIAComWrapperNetstandard" Version="1.0.1" />
   </ItemGroup>
 </Project>

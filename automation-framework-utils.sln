@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1706.11
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uia-automation-utils", "uia-automation-utils\uia-automation-utils.csproj", "{6BAF075E-7FDF-4121-974D-9045B35E7B06}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uia-automation-utils", "uia-automation-utils\uia-automation-utils.csproj", "{B519A579-BBF7-45BA-B2D9-9826C0C84CAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6BAF075E-7FDF-4121-974D-9045B35E7B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6BAF075E-7FDF-4121-974D-9045B35E7B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6BAF075E-7FDF-4121-974D-9045B35E7B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6BAF075E-7FDF-4121-974D-9045B35E7B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B519A579-BBF7-45BA-B2D9-9826C0C84CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B519A579-BBF7-45BA-B2D9-9826C0C84CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B519A579-BBF7-45BA-B2D9-9826C0C84CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B519A579-BBF7-45BA-B2D9-9826C0C84CAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E7D25C56-074E-44D1-97B2-0877BEC21B2B}
+		SolutionGuid = {D4E1443B-E5D2-4DE1-8346-2B6913662814}
 	EndGlobalSection
 EndGlobal
