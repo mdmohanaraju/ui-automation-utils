@@ -14,8 +14,13 @@
 
   <ItemGroup>
     <None Remove="Extensions\" />
+    <None Remove="Extensions\ElementIdentification.SearchMethods.cs" />
+    <None Remove="Search\" />
+    <None Remove="Extensions\Extensions.ScrollItemPattern" />
+    <None Remove="Extensions\Extensions.GridItemPattern" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Extensions\" />
+    <Folder Include="Search\" />
   </ItemGroup>
 </Project>

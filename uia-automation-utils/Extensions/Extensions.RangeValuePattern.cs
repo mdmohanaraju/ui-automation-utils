@@ -3,9 +3,12 @@ using System.Windows.Automation;
 
 namespace UIA.Automation.Utils.Extensions
 {
-	public static class AutomationElementExtensions
+	public static partial class AutomationElementExtensions
 	{
-        #region Set range for a slider
+        public static RangeValuePattern GetRangeValuePattern(this AutomationElement element)
+        {
+            return element.GetPattern<RangeValuePattern>(RangeValuePattern.Pattern);
+        }
 
         public static void SetRange(this AutomationElement element, double value)
 		{
@@ -36,8 +39,6 @@ namespace UIA.Automation.Utils.Extensions
             var rangeValuePattern = element.GetPattern<RangeValuePattern>(RangeValuePattern.Pattern);
             return rangeValuePattern.Current.Minimum;
         }
-
-        #endregion
     }
 }
 

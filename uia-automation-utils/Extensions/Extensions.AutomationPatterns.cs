@@ -3,7 +3,7 @@ using System.Windows.Automation;
 
 namespace UIA.Automation.Utils.Extensions
 {
-	public static class AutomationPatternExtensions
+	public static partial class AutomationElementExtensions
 	{
 		public static T GetPattern<T>(this AutomationElement element, AutomationPattern pattern)
 		{
@@ -16,12 +16,7 @@ namespace UIA.Automation.Utils.Extensions
 #pragma warning disable CS8603 // Possible null reference return.
             return default;
 #pragma warning restore CS8603 // Possible null reference return.
-        }
-
-        public static InvokePattern GetInvokePattern(this AutomationElement element)
-        {
-			return element.GetPattern<InvokePattern>(InvokePattern.Pattern);			
-        }
+        }        
     }
 }
 
