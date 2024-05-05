@@ -5,7 +5,6 @@ using System.Linq;
 using System.Windows.Automation;
 using Interop.UIAutomationClient;
 
-
 namespace UIA.Automation.Utils.Search
 {
 	public class Element
