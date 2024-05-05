@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>uia_automation_utils</RootNamespace>
-    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>uia_automation_utils</RootNamespace>    
   </PropertyGroup>
 
   <ItemGroup>

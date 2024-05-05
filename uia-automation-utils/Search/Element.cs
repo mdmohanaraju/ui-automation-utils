@@ -11,7 +11,7 @@ namespace UIA.Automation.Utils.Search
 	{
         private List<PropertyCondition> _propertyConditions = new List<PropertyCondition>();
         private TreeScope _treeScope = TreeScope.TreeScope_Descendants;
-        private AutomationElement? _parentElement;
+        private AutomationElement _parentElement;
 
         private Element()
         {
