@@ -3,6 +3,9 @@ using System.Windows.Automation;
 
 namespace UIA.Automation.Utils.Extensions
 {
+	/// <summary>
+	/// Extensions for <see cref="AutomationElement"/> object
+	/// </summary>
     public static partial class AutomationElementExtensions
     {
         public static TextPattern GetTextPattern(this AutomationElement element)

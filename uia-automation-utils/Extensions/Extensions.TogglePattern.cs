@@ -4,6 +4,9 @@ using Interop.UIAutomationClient;
 
 namespace UIA.Automation.Utils.Extensions
 {
+	/// <summary>
+	/// Extensions for <see cref="AutomationElement"/> object
+	/// </summary>
     public static partial class AutomationElementExtensions
     {
         public static TogglePattern GetTogglePattern(this AutomationElement element)

@@ -7,10 +7,13 @@ using Interop.UIAutomationClient;
 
 namespace UIA.Automation.Utils.Search
 {
+    /// <summary>
+    /// Class to find desktop elements using Microsoft UIA framework
+    /// </summary>
 	public class Element
 	{
         private List<PropertyCondition> _propertyConditions = new List<PropertyCondition>();
-        private TreeScope _treeScope = TreeScope.TreeScope_Descendants;
+        private TreeScope _treeScope = TreeScope.TreeScope_Subtree;
         private AutomationElement _parentElement;
 
         private Element()
@@ -113,7 +116,11 @@ namespace UIA.Automation.Utils.Search
             return this;
         }
 
-        
+
+        /// <summary>
+        /// Find first element that satisfies the serach conditions
+        /// </summary>
+        /// <returns>Found <see cref="AutomationElement"/></returns>
         public AutomationElement FindFirst()
         {
             var searchConditions = GetSearchConditions();
@@ -121,6 +128,10 @@ namespace UIA.Automation.Utils.Search
             return parent.FindFirst(_treeScope, searchConditions);
         }
 
+        /// <summary>
+        /// Find all elements that satisfy the search conditions
+        /// </summary>
+        /// <returns>All elements as <see cref="AutomationElement"/> objects</returns>
         public IEnumerable<AutomationElement> FindAll()
         {
             var searchConditions = GetSearchConditions();
