@@ -8,6 +8,11 @@ namespace UIA.Automation.Utils.Extensions
 	/// </summary>
 	public static partial class AutomationElementExtensions
 	{
+        /// <summary>
+        /// Get RangeValue pattern object
+        /// </summary>
+        /// <param name="element">Automation element</param>
+        /// <returns>RangeValue pattern object if supported else null</returns>
         public static RangeValuePattern GetRangeValuePattern(this AutomationElement element)
         {
             return element.GetPattern<RangeValuePattern>(RangeValuePattern.Pattern);
@@ -19,25 +24,67 @@ namespace UIA.Automation.Utils.Extensions
             rangeValuePattern?.SetValue(value);
         }
 
+        /// <summary>
+        /// Gets a value that specifies whether the value of a UI Automation element is read-only.
+        /// </summary>
+        /// <param name="element">Represents a control that can be set to a value within a range.</param>
+        /// <returns>true if the value is read-only; false if it can be modified. The default is true.</returns>
         public static bool IsReadOnly(this AutomationElement element)
         {
             var rangeValuePattern = element.GetPattern<RangeValuePattern>(RangeValuePattern.Pattern);
             return rangeValuePattern.Current.IsReadOnly;
         }
 
+        /// <summary>
+        /// Gets the current value of the UI Automation element.
+        /// </summary>
+        /// <param name="element">Represents a control that can be set to a value within a range.</param>
+        /// <returns>The current value of the UI Automation element or null if the element does not support Value. The default value is 0.0.</returns>
         public static double GetRange(this AutomationElement element)
         {
             var rangeValuePattern = element.GetPattern<RangeValuePattern>(RangeValuePattern.Pattern);
             return rangeValuePattern.Current.Value;
         }
 
+        /// <summary>
+        /// Gets the maximum range value supported by the UI Automation element.
+        /// </summary>
+        /// <param name="element">Represents a control that can be set to a value within a range.</param>
+        /// <returns>The maximum value supported by the UI Automation element or null if the element does not support Maximum. The default value is 0.0.</returns>
         public static double GetMaximumRange(this AutomationElement element)
         {
             var rangeValuePattern = element.GetPattern<RangeValuePattern>(RangeValuePattern.Pattern);
             return rangeValuePattern.Current.Maximum;
         }
 
+        /// <summary>
+        /// Gets the minimum range value supported by the UI Automation element.
+        /// </summary>
+        /// <param name="element">Represents a control that can be set to a value within a range.</param>
+        /// <returns>he minimum value supported by the UI Automation element or null if the element does not support Minimum. The default value is 0.0.</returns>
         public static double GetMinimumRange(this AutomationElement element)
+        {
+            var rangeValuePattern = element.GetPattern<RangeValuePattern>(RangeValuePattern.Pattern);
+            return rangeValuePattern.Current.Minimum;
+        }
+
+        /// <summary>
+        /// Gets the control-specific large-change value which is added to or subtracted from the Value property.
+        /// </summary>
+        /// <param name="element">Represents a control that can be set to a value within a range.</param>
+        /// <returns>The large-change value or null if the element does not support LargeChange. The default value is 0.0.</returns>
+        public static double GetLargeChange(this AutomationElement element)
+        {
+            var rangeValuePattern = element.GetPattern<RangeValuePattern>(RangeValuePattern.Pattern);
+            return rangeValuePattern.Current.Minimum;
+        }
+
+        /// <summary>
+        /// Gets the control-specific small-change value which is added to or subtracted from the Value property.
+        /// </summary>
+        /// <param name="element">Represents a control that can be set to a value within a range.</param>
+        /// <returns>The small-change value unique to the UI Automation element or null if the element does not support SmallChange. The default value is 0.0.</returns>
+        public static double GetSmallChange(this AutomationElement element)
         {
             var rangeValuePattern = element.GetPattern<RangeValuePattern>(RangeValuePattern.Pattern);
             return rangeValuePattern.Current.Minimum;
