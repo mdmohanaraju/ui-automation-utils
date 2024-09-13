@@ -18,7 +18,7 @@ namespace UIA.Automation.Utils.Extensions
         }
 
         public static void SetRange(this AutomationElement element, double value)
-		{
+        {
             var rangeValuePattern = element.GetPattern<RangeValuePattern>(RangeValuePattern.Pattern);
             rangeValuePattern?.SetValue(value);
         }
