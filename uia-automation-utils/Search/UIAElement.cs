@@ -10,13 +10,16 @@ namespace UIA.Automation.Utils.Search
     /// <summary>
     /// Class to find desktop elements using Microsoft UIA framework
     /// </summary>
-	public class Element
+	public class UIAElement
 	{
         private List<PropertyCondition> _propertyConditions = new List<PropertyCondition>();
         private TreeScope _treeScope = TreeScope.TreeScope_Subtree;
         private AutomationElement _parentElement;
 
-        private Element()
+        /// <summary>
+        /// Private constructor to prevent instantiation
+        /// </summary>
+        private UIAElement()
         {
         }
 
@@ -41,7 +44,7 @@ namespace UIA.Automation.Utils.Search
         /// <summary>
         /// Gets the element search context
         /// </summary>
-        public static Element Search => new Element();
+        public static UIAElement Search => new UIAElement();
 
         /// <summary>
         /// Gets the element referenced by the given window handle
@@ -55,7 +58,7 @@ namespace UIA.Automation.Utils.Search
         /// </summary>
         /// <param name="name">The name of the UI element</param>
         /// <returns>The <see cref="Element"/> search context object</returns>
-        public Element WithName(string name)
+        public UIAElement WithName(string name)
         {
             AddPropertyCondition(AutomationElement.NameProperty, name);
             return this;
@@ -66,7 +69,7 @@ namespace UIA.Automation.Utils.Search
         /// </summary>
         /// <param name="id">The name of the UI element</param>
         /// <returns>The <see cref="Element"/> search context object</returns>
-        public Element WithAutomationId(string id)
+        public UIAElement WithAutomationId(string id)
         {
             AddPropertyCondition(AutomationElement.AutomationIdProperty, id);
             return this;
@@ -77,7 +80,7 @@ namespace UIA.Automation.Utils.Search
         /// </summary>
         /// <param name="className">The name of the UI element</param>
         /// <returns>The <see cref="Element"/> search context object</returns>
-        public Element WithClassName(string className)
+        public UIAElement WithClassName(string className)
         {
             AddPropertyCondition(AutomationElement.ClassNameProperty, className);
             return this;
@@ -88,7 +91,7 @@ namespace UIA.Automation.Utils.Search
         /// </summary>
         /// <param name="helpText">The name of the UI element</param>
         /// <returns>The <see cref="Element"/> search context object</returns>
-        public Element WithHelpText(string helpText)
+        public UIAElement WithHelpText(string helpText)
         {
             AddPropertyCondition(AutomationElement.HelpTextProperty, helpText);
             return this;
@@ -99,7 +102,7 @@ namespace UIA.Automation.Utils.Search
         /// </summary>
         /// <param name="treeScope">The name of the UI element</param>
         /// <returns>The <see cref="Element"/> search context object</returns>
-        public Element WithTreeScope(TreeScope treeScope)
+        public UIAElement WithTreeScope(TreeScope treeScope)
         {
             _treeScope = treeScope;
             return this;
@@ -110,7 +113,7 @@ namespace UIA.Automation.Utils.Search
         /// </summary>
         /// <param name="name">The name of the UI element</param>
         /// <returns>The <see cref="Element"/> search context object</returns>
-        public Element WithParent(AutomationElement parentElement)
+        public UIAElement WithParent(AutomationElement parentElement)
         {
             _parentElement = parentElement;
             return this;

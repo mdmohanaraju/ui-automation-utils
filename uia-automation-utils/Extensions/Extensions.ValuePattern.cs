@@ -1,12 +1,11 @@
-﻿using System;
-using System.Windows.Automation;
+﻿using System.Windows.Automation;
 
 namespace UIA.Automation.Utils.Extensions
 {
-	/// <summary>
-	/// Extensions for <see cref="AutomationElement"/> object
-	/// </summary>
-	public static partial class AutomationElementExtensions
+    /// <summary>
+    /// Extensions for <see cref="AutomationElement"/> object
+    /// </summary>
+    public static partial class AutomationElementExtensions
     {
         /// <summary>
         /// Get Value pattern object
