@@ -75,7 +75,7 @@ namespace UIA.Automation.Utils.Extensions
         public static double GetLargeChange(this AutomationElement element)
         {
             var rangeValuePattern = element.GetPattern<RangeValuePattern>(RangeValuePattern.Pattern);
-            return rangeValuePattern.Current.Minimum;
+            return rangeValuePattern.Current.LargeChange;
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace UIA.Automation.Utils.Extensions
         public static double GetSmallChange(this AutomationElement element)
         {
             var rangeValuePattern = element.GetPattern<RangeValuePattern>(RangeValuePattern.Pattern);
-            return rangeValuePattern.Current.Minimum;
+            return rangeValuePattern.Current.SmallChange;
         }
     }
 }

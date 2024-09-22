@@ -22,9 +22,7 @@ namespace UIA.Automation.Utils.Extensions
 				return (T)patternObj;
 			}
 
-#pragma warning disable CS8603 // Possible null reference return.
-            return default;
-#pragma warning restore CS8603 // Possible null reference return.
+            return default(T);
         }        
     }
 }
