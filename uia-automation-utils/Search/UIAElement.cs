@@ -39,7 +39,7 @@ namespace UIA.Automation.Utils.Search
         /// <summary>
         /// Private constructor to prevent instantiation
         /// </summary>
-        private UIAElement()
+        internal UIAElement()
         {
         }
 
@@ -64,7 +64,7 @@ namespace UIA.Automation.Utils.Search
         /// <summary>
         /// Gets the element search context
         /// </summary>
-        public static UIAElement Search => new UIAElement();
+        public static UIAElement Search() => new UIAElement();
 
         /// <summary>
         /// Gets the element referenced by the given window handle

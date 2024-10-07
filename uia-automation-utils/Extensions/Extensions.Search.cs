@@ -18,34 +18,24 @@
 // SOFTWARE.
 #endregion
 
-using UIA.Automation.Utils.Extensions;
+using System.Windows.Automation;
 using UIA.Automation.Utils.Search;
 
-namespace UIA.Automation.Utils.Usage
+namespace UIA.Automation.Utils.Extensions
 {
     /// <summary>
-    /// Test class for UIAElement
+    /// Extensions for <see cref="AutomationElement"/> objec t
     /// </summary>
-    public class UIATest
+    public static partial class AutomationElementExtensions
     {
         /// <summary>
-        /// Method to demonstrate how to use find first
+        /// Gets the element search context, with the element automatically assinged as the parent element
         /// </summary>
-        public void FindFirst()
+        /// <param name="element">Automation element</param>
+        /// <returns>Scroll pattern object if supported else null</returns>
+        public static UIAElement Search(this AutomationElement element)
         {
-            var calculatorWindow = UIAElement.Search().WithName("Calculator").FindFirst();
-            var numberPad = calculatorWindow.Search().WithAutomationId("numberPad").FindFirst();
-            var num1Button = numberPad.Search().WithAutomationId("num1Button").FindFirst();
-
-            num1Button.Click();
-        }
-
-        /// <summary>
-        /// Method to demonstrate how to use find all
-        /// </summary>
-        public void FindAll()
-        {
-            UIAElement.Search().WithName("Calculator").WithAutomationId("CalculatorResults").FindAll();
+            return new UIAElement().WithParent(element);
         }
     }
 }
