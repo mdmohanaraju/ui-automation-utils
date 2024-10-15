@@ -3,6 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>uia_automation_utils</RootNamespace>
+    <PackageId>uia-automation-utils</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>mdmohanaraju</Authors>
+    <PackageDescription>UIA Simplified!!!</PackageDescription>
+    <RepositoryUrl>https://github.com/mdmohanaraju/ui-automation-utils</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
