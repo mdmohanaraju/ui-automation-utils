@@ -8,9 +8,17 @@
     <Authors>mdmohanaraju</Authors>
     <PackageDescription>UIA Simplified!!!</PackageDescription>
     <RepositoryUrl>https://github.com/mdmohanaraju/ui-automation-utils</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="UIAComWrapperNetstandard" Version="1.0.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE" Pack="true" Visible="false" PackagePath=""/>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+</ItemGroup>
 </Project>
